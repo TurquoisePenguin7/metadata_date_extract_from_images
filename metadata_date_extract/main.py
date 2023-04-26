@@ -12,8 +12,8 @@ def main():
 
     def to_destination_dir(file, path=None):
         date = dt.datetime.strptime(time.ctime(os.path.getctime(file)), "%a %b %d %H:%M:%S %Y")
-        output_file = f"{file.stem}_{date.month}_{date.day}_{date.year}{file.suffix}"
-        file_location = directory / output_file
+        output_file_name = f"{date.month}_{date.day}_{date.year}_{file.stem}{file.suffix}"
+        file_location = directory / output_file_name
         shutil.copyfile(file, file_location)
     
     images = Path.cwd() / "images"
