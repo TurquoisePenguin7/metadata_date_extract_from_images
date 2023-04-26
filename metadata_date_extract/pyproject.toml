@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "metadata-date-extract"
+version = "0.1.0"
+description = ""
+authors = ["TurquoisePenguin7 <turquoisehairedpenguinhorn@gmail.com>"]
+readme = "README.md"
+packages = [{include = "metadata_date_extract"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
