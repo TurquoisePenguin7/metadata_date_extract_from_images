@@ -5,7 +5,7 @@ However, I have found it very interesting and decided to make it a side project 
 
 TODO:
 ================
-* Add an ability to specify folders
+* Add an ability to specify folder location
 * Add a check for sorting files based on their extension according to the task description
 
 
