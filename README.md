@@ -12,11 +12,15 @@ TASK DESCRIPTION:
 
 TODO:
 ================
-* Add an ability to specify folder location
-* Add a check for files based on their extension according to the task description.
+~~* Add an ability to specify folder location ~~
+~~* Add a check for files based on their extension according to the task description.~~
+* Work on code clarity, it is a bit dirty, leave extra comments.
+
 
 
 
 WHAT WAS DONE SO FAR:
 ================
 * Basic program logic, but it only creates a folder with the file with metadata creation of the it.
+* Added the ability to specify folder location
+* Added a check for file extension
