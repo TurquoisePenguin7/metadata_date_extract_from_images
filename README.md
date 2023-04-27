@@ -1,5 +1,14 @@
 # metadata_date_extract_from_images
 
+How it works
+================
+Defaults so far:
+
+> main.py [-h] [-fe FILEEXTENSIONS [FILEEXTENSIONS ...]] [-d PROCESSED_FILES] path_to_files
+
+
+
+
 THIS IS A WIP
 ================
 
