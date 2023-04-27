@@ -18,6 +18,7 @@ However, I have found it very interesting and decided to make it a side project 
 TASK DESCRIPTION:
 ================
 "I need a simple app that changes file name to have the creation date at the beginning files in a designated folder. For example, DJI_1.mp4 would be 202304011005_DJI_1.mp4. I should be able to designate the folder to perform the action on as well as the file type/extension."
+As far as I understand - it is needed to be in format of year-month-day-hour-minute.
 
 TODO:
 ================
