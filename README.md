@@ -22,6 +22,6 @@ TODO:
 
 WHAT WAS DONE SO FAR:
 ================
-* Basic program logic, but it only creates a folder with the file with metadata creation of the it.
+* Basic program logic.
 * Added the ability to specify folder location
 * Added a check for file extension
