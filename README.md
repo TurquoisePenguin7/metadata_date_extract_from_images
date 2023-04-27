@@ -26,7 +26,7 @@ TODO:
 ~~* Add a check for files based on their extension according to the task description.~~
 * Work on code clarity, it is a bit dirty, leave extra comments.
 * Work on help section
-
+* re-do readme
 
 
 
