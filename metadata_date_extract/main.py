@@ -32,8 +32,7 @@ def main():
             file_location = processed_dir / output_file_name
             shutil.copyfile(file, file_location)
     
-    
-    # test case for images...
+
     try:
         # path specification
         files = Path(args.path_to_files)
