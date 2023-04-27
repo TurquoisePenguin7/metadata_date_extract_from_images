@@ -12,7 +12,8 @@ TASK DESCRIPTION:
 
 TODO:
 ================
-~~* Add an ability to specify folder location ~~
+~~* Add an ability to specify folder location.~~
+
 ~~* Add a check for files based on their extension according to the task description.~~
 * Work on code clarity, it is a bit dirty, leave extra comments.
 
