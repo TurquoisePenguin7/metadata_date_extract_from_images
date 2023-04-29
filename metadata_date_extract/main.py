@@ -8,6 +8,7 @@ import argparse
 
 
 def main():
+    """A CLI parser to extract metadata."""
 
     parser = argparse.ArgumentParser(
         description="A quick script to add date from the metadata of the file."
@@ -20,9 +21,13 @@ def main():
 
     args = parser.parse_args()
 
-    def file_to_destination_dir(file, processed_dir=None):
+    def file_to_destination_dir(file: Path, processed_dir=None) -> None:
+        """This function retreives the metadata creation time from the file and returns it for process.
+           It then makes a check on the directory and moves the files accordingly."""
         date = dt.datetime.strptime(time.ctime(os.path.getctime(file)), "%a %b %d %H:%M:%S %Y")
         output_file_name = f"{date.year}{date.month}{date.day}{date.hour}{date.minute}_{file.stem}{file.suffix}"
+        
+        # A check on directories
         if processed_dir is None:
             default_directory = Path.cwd() / "processed_files"
             default_directory.mkdir(exist_ok=True)
@@ -34,12 +39,15 @@ def main():
     
 
     try:
-        # path specification
+        # Setting up the path for the file location that was specified, as well as extensions and a new folder for processed files.
         files = Path(args.path_to_files)
         extensions = args.fileextensions
         processed_files = Path(args.processed_files)
+
         for file in files.glob(f'*.*'):
-            # checks if value is in pathlib object, otherwise do nothing. 
+            # checks if extension is in the extensions, otherwise do nothing.
+            # We strip the code in order to get the proper value from the suffix from the Path object
+            # Since it returns ".jpg", for example, we just remove the dot. 
             if file.suffix.strip('.') in extensions:
                 file_to_destination_dir(file, processed_files)
                 print(f"Working on {file.name}, sending it to {processed_files}")
