@@ -22,7 +22,7 @@ def main():
     args = parser.parse_args()
 
     def file_to_destination_dir(file: Path, processed_dir=None) -> None:
-        """This function retreives the metadata creation time from the file and returns it for process.
+        """This function retreives the metadata creation time from the file.
            It then makes a check on the directory and moves the files accordingly."""
         date = dt.datetime.strptime(time.ctime(os.path.getctime(file)), "%a %b %d %H:%M:%S %Y")
         output_file_name = f"{date.year}{date.month}{date.day}{date.hour}{date.minute}_{file.stem}{file.suffix}"
