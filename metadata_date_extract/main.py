@@ -47,13 +47,15 @@ def main():
         for file in files.glob(f'*.*'):
             # checks if extension is in the extensions, otherwise do nothing.
             # We strip the code in order to get the proper value from the suffix from the Path object
-            # Since it returns ".jpg", for example, we just remove the dot. 
+            # Since it returns ".jpg", for example, we just remove the dot and get the exact name instead.
             if file.suffix.strip('.') in extensions:
                 file_to_destination_dir(file, processed_files)
                 print(f"Working on {file.name}, sending it to {processed_files}")
+    # Error handling, when file or extention is not specified
     except IndexError:
         print("Please, specify the file name and/or extension.")
         sys.exit(1)
+    # If file doesn't exist
     except FileNotFoundError:
         print("File doesn't exist...")
         sys.exit(1)
