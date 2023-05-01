@@ -14,7 +14,7 @@ def main():
         description="A quick script to add date from the metadata of the file."
     )
     parser.add_argument('path_to_files', help="File path to the files")
-    parser.add_argument('-fe', '--fileextensions',
+    parser.add_argument('-e', '--extensions',
                     action="extend", nargs="+", dest='fileextensions',
                     help="Supplies file extension to the script, supports multiple.")
     parser.add_argument('-d', '--dir', dest="processed_files", help="processed files destination", default=Path.cwd() / "processed_files")
