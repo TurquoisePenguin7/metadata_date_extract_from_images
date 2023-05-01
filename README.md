@@ -8,7 +8,6 @@ Defaults so far:
 
 
 
-
 THIS IS A WIP
 ================
 
@@ -28,6 +27,7 @@ TODO:
 * Work on code clarity, it is a bit dirty, leave extra comments.
 * Work on help section
 * re-do readme
+* re-do the script, cause it is not working as intended and very messy.
 
 
 
