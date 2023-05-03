@@ -5,8 +5,11 @@ How it works
 
 > main.py path_to_files [-e, --extension FILEEXTENSIONS [FILEEXTENSIONS ...]] [-d, --dir PROCESSED_FILES_DESTINATION]
 
+For example: __python main.py /home/%username%/Desktop/images -e jpg, png__
+
 By default - file destination is current folder, but it can be specified by -d or --dir flag.
 
+For example: __python main.py /home/%username%/Desktop/images -e jpg, png -d /home/%username%/Desktop/formatted_images__
 
 
 THIS IS A WIP
