@@ -13,36 +13,30 @@ def main():
     parser = argparse.ArgumentParser(
         description="A quick script to add date from the metadata of the file."
     )
-    parser.add_argument('path_to_files', help="File path to the files")
     parser.add_argument('-e', '--extensions',
                     action="extend", nargs="+", dest='fileextensions',
                     help="Supplies file extension to the script, supports multiple.")
     parser.add_argument('-d', '--dir', dest="processed_files", help="processed files destination", default=Path.cwd() / "processed_files")
+    parser.add_argument('path_to_files', help="File path to the files")
 
     args = parser.parse_args()
 
-    def file_to_destination_dir(file: Path, processed_dir=None) -> None:
+    def file_to_destination_dir(file: Path, directory: Path) -> None:
         """This function retreives the metadata creation time from the file.
            It then makes a check on the directory and moves the files accordingly."""
         date = dt.datetime.strptime(time.ctime(os.path.getctime(file)), "%a %b %d %H:%M:%S %Y")
         output_file_name = f"{date.year}{date.month}{date.day}{date.hour}{date.minute}_{file.stem}{file.suffix}"
-        
-        # A check on directories
-        if processed_dir is None:
-            default_directory = Path.cwd() / "processed_files"
-            default_directory.mkdir(exist_ok=True)
-            file_location = default_directory / output_file_name
-            shutil.copyfile(file, file_location)
-        else:
-            file_location = processed_dir / output_file_name
-            shutil.copyfile(file, file_location)
-    
+        # Move to directory
+        file_location = directory / output_file_name
+        shutil.copy2(file, file_location)
 
     try:
         # Setting up the path for the file location that was specified, as well as extensions and a new folder for processed files.
         files = Path(args.path_to_files)
         extensions = args.fileextensions
+        # Creating a folder either by default value or specified one, then move the files.
         processed_files = Path(args.processed_files)
+        processed_files.mkdir(exist_ok=True)
 
         for file in files.glob(f'*.*'):
             # checks if extension is in the extensions, otherwise do nothing.
@@ -56,8 +50,8 @@ def main():
         print("Please, specify the file name and/or extension.")
         sys.exit(1)
     # If file doesn't exist
-    except FileNotFoundError:
-        print("File doesn't exist...")
+    except FileNotFoundError as e:
+        print("File doesn't exist...", e)
         sys.exit(1)
 
 if __name__ == "__main__":
