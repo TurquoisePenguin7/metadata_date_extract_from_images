@@ -8,7 +8,7 @@ Defaults so far:
 
 
 
-THIS IS A WIP
+THIS IS A WIP (ON HOLD)
 ================
 
 This is a quick script on the task I saw for upwork that I didn't manage to get, sadly.
