@@ -28,7 +28,7 @@ def main():
         output_file_name = f"{date.year}{date.month}{date.day}{date.hour}{date.minute}_{file.stem}{file.suffix}"
         # Move to directory
         file_location = directory / output_file_name
-        shutil.copy2(file, file_location)
+        shutil.copyfile(file, file_location)
 
     try:
         # Setting up the path for the file location that was specified, as well as extensions and a new folder for processed files.
