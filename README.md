@@ -2,9 +2,9 @@
 
 How it works
 ================
-Defaults so far:
 
-> main.py [-h] [-fe FILEEXTENSIONS [FILEEXTENSIONS ...]] [-d PROCESSED_FILES] path_to_files
+> main.py path_to_files [-e, --extension FILEEXTENSIONS [FILEEXTENSIONS ...]] [-d, --dir PROCESSED_FILES_DESTINATION]
+By default - file destination is current folder, but it can be specified by -d or --dir flag.
 
 
 
@@ -27,7 +27,7 @@ TODO:
 * Work on code clarity, it is a bit dirty, leave extra comments.
 * Work on help section
 * re-do readme
-* re-do the script, cause it is not working as intended and very messy.
+~~* re-do the script, cause it is not working as intended and very messy.~~
 
 
 
