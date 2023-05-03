@@ -4,6 +4,7 @@ How it works
 ================
 
 > main.py path_to_files [-e, --extension FILEEXTENSIONS [FILEEXTENSIONS ...]] [-d, --dir PROCESSED_FILES_DESTINATION]
+
 By default - file destination is current folder, but it can be specified by -d or --dir flag.
 
 
@@ -24,10 +25,11 @@ TODO:
 ~~* Add an ability to specify folder location.~~
 
 ~~* Add a check for files based on their extension according to the task description.~~
+~~* re-do the script, cause it is not working as intended and very messy.~~
 * Work on code clarity, it is a bit dirty, leave extra comments.
 * Work on help section
 * re-do readme
-~~* re-do the script, cause it is not working as intended and very messy.~~
+
 
 
 
